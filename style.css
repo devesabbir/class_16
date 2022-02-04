@@ -319,18 +319,36 @@ ul {
   margin: 10px 0;
 }
 
+.acco-section .sa-accordion .item .acco-header {
+  position: relative;
+  cursor: pointer;
+}
+
+.acco-section .sa-accordion .item .acco-header::after {
+  content: '\f0de';
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 500;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
 .acco-section .sa-accordion .item .acco-header.active {
   background-color: green;
 }
 
-.acco-section .sa-accordion .item .acco-content {
-  max-height: 0;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  overflow: hidden;
+.acco-section .sa-accordion .item .acco-header.active::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
-.acco-section .sa-accordion .item .acco-content.active {
-  max-height: 500px;
+.acco-section .sa-accordion .item .acco-content {
+  height: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */

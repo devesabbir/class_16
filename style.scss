@@ -286,19 +286,33 @@ ul {
             margin: 10px 0;
 
             .acco-header{
+                position: relative;
+                cursor: pointer;
+                &::after{
+                    content: '\f0de';
+                    font-family: 'Font Awesome 5 Pro';
+                    font-weight: 500;
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    right: 10px;
+                    transition: all .5s ease-in-out;
+                }
                 &.active{
                    background-color: green;
+                     
+                   &::after{
+                    transform: rotate(180deg);
+                  }
+                 
                 }
             }
 
             .acco-content{
-               max-height: 0;
-               transition:all .3s ease-in-out;
+               height: 0;
+               transition:all .3s;
                overflow: hidden;
 
-               &.active{
-                  max-height: 500px;     
-               }
             }
          }
      }

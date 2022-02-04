@@ -60,18 +60,21 @@ const accHeader = document.querySelectorAll('.acco-header')
 const acc_content = document.querySelectorAll('.acco-content')
 
 accHeader.forEach( item => {
-     item.addEventListener('click', (e) =>{
-        acc_content.forEach( content => {
-            if(e.currentTarget.nextElementSibling !== content){
-                content.classList.remove('active')
-                accHeader.forEach( btn => {
-                    btn.classList.remove('active')
-                })
+     item.addEventListener('click', function(){
+        accHeader.forEach( i => {
+            if(i != this){
+                i.classList.remove('active')
+                i.nextElementSibling.style.height = '0px';
             }
         })
 
-        item.nextElementSibling.classList.toggle('active')
         item.classList.toggle('active')
+        if(item.classList.contains('active')){
+            item.nextElementSibling.style.height = item.nextElementSibling.scrollHeight +'px' 
+        }else{
+            item.nextElementSibling.style.height = '0px';
+        }
+
      })
 })
 
