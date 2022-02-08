@@ -1,6 +1,4 @@
-/**
- * Modal Elements Get
- */
+//getElements for Modal
 const mdl_button = document.querySelector('.mdl_btn')
 const modal_area = document.querySelector('.modal-area')
 const modal = document.querySelector('.sa-modal')
@@ -53,28 +51,54 @@ modal_area.addEventListener('click',function(e) {
     }
 })
 
-/** 
- * Accordion Elements get
-*/
+
+//getElements for Accordion 
+
 const accHeader = document.querySelectorAll('.acco-header')
 const acc_content = document.querySelectorAll('.acco-content')
 
 accHeader.forEach( item => {
-     item.addEventListener('click', function(){
+     item.addEventListener('click',function(){
         accHeader.forEach( i => {
             if(i != this){
                 i.classList.remove('active')
                 i.nextElementSibling.style.height = '0px';
+              
             }
         })
 
         item.classList.toggle('active')
         if(item.classList.contains('active')){
-            item.nextElementSibling.style.height = item.nextElementSibling.scrollHeight +'px' 
+            item.nextElementSibling.style.height = item.nextElementSibling.scrollHeight +'px'
+            
+     
         }else{
             item.nextElementSibling.style.height = '0px';
+         
         }
 
-     })
+     })  
+
 })
+
+
+ // getElements for tab
+const tab_menu = document.querySelectorAll('.tab-menu ul a')
+const tab_pane_all = document.querySelectorAll('.tab-pane')
+
+ tab_menu.forEach( item => {
+    item.addEventListener('click', function(e){
+        e.preventDefault()
+        tab_menu.forEach( i => {
+            i.classList.remove('active')
+        })
+        item.classList.add('active')
+        tab_pane_all.forEach( d => {
+            d.classList.remove('active')
+        })
+        let tab_pane = document.querySelector(this.getAttribute('href'))
+        tab_pane.classList.add('active')
+    })
+    
+ })
 

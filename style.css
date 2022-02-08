@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 .mid {
@@ -59,7 +61,7 @@ ul {
 
 .banner-section .banner-part .banner-content a {
   display: inline-block;
-  background: #2374e1;
+  background: #24c19a;
   padding: 10px 50px;
   border-radius: 5px;
   color: #ffff;
@@ -89,6 +91,7 @@ ul {
   opacity: 0;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+  z-index: 999;
 }
 
 .modal-area .sa-modal {
@@ -109,11 +112,6 @@ ul {
   opacity: 0;
 }
 
-.modal-area .sa-modal .modal-content {
-  -webkit-box-shadow: 0 0 10px 10px #00000014;
-          box-shadow: 0 0 10px 10px #00000014;
-}
-
 .modal-area .sa-modal .modal-content .modal-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -127,8 +125,8 @@ ul {
 }
 
 .modal-area .sa-modal .modal-content .modal-header h4 {
-  font-size: 25px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 600;
   -ms-flex-preferred-size: 60%;
       flex-basis: 60%;
   text-align: right;
@@ -136,9 +134,9 @@ ul {
 
 .modal-area .sa-modal .modal-content .modal-header .close {
   font-size: 33px;
+  font-weight: 500;
   color: #000;
   cursor: pointer;
-  font-weight: bold;
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
   text-align: right;
@@ -164,8 +162,8 @@ ul {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .modal-area .sa-modal .modal-content .modal-body .body-top .name {
@@ -173,11 +171,16 @@ ul {
       flex-basis: 80%;
 }
 
+.modal-area .sa-modal .modal-content .modal-body .body-top .name h6 {
+  font-size: 17px;
+  font-weight: 500;
+}
+
 .modal-area .sa-modal .modal-content .modal-body .body-top .name select {
   background: #242526;
   color: #fff;
   border-color: #fff;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .modal-area .sa-modal .modal-content .modal-body .content textarea {
@@ -188,6 +191,7 @@ ul {
   border: none;
   outline: none;
   padding: 10px 10px;
+  font-size: 17px;
 }
 
 .modal-area .sa-modal .modal-content .modal-body .content textarea:focus {
@@ -200,11 +204,15 @@ ul {
   display: -ms-flexbox;
   display: flex;
   padding: 20px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .modal-area .sa-modal .modal-content .modal-body .body-bottom span {
   display: block;
   width: 50%;
+  font-size: 20px;
 }
 
 .modal-area .sa-modal .modal-content .modal-body .body-bottom ul {
@@ -218,13 +226,14 @@ ul {
   display: inline-block;
   color: orange;
   padding: 0 10px;
+  font-size: 25px;
 }
 
 .modal-area .sa-modal .modal-content .modal-footer {
   text-align: center;
   border: 1px solid #ddd;
   padding: 10px 0;
-  background-color: #2374e1;
+  background-color: #24c19a;
 }
 
 .modal-area .sa-modal .modal-content .modal-footer button {
@@ -253,6 +262,7 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 9999;
 }
 
 .sa-alert .alert-content {
@@ -262,6 +272,7 @@ ul {
   background: #242526;
   color: #fff;
   padding: 17px 17px;
+  border-radius: 5px;
 }
 
 .sa-alert .alert-content .top {
@@ -276,6 +287,8 @@ ul {
 .sa-alert .alert-content .top h4 {
   -ms-flex-preferred-size: 70%;
       flex-basis: 70%;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .sa-alert .alert-content .top span {
@@ -283,6 +296,12 @@ ul {
       flex-basis: 30%;
   text-align: right;
   cursor: pointer;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.sa-alert .alert-content .content {
+  padding: 10px 0;
 }
 
 .sa-alert .alert-content .bottom {
@@ -302,7 +321,7 @@ ul {
 }
 
 .sa-alert .alert-content .bottom a:last-child {
-  background-color: #2374e1;
+  background-color: #24c19a;
 }
 
 /*accordion-css*/
@@ -322,6 +341,14 @@ ul {
 .acco-section .sa-accordion .item .acco-header {
   position: relative;
   cursor: pointer;
+  padding: 10px 10px;
+  background-color: #24c19a;
+  border-radius: 5px;
+}
+
+.acco-section .sa-accordion .item .acco-header h2 {
+  color: #fff9f9;
+  font-weight: 500;
 }
 
 .acco-section .sa-accordion .item .acco-header::after {
@@ -330,17 +357,18 @@ ul {
   font-weight: 500;
   display: inline-block;
   position: absolute;
-  top: 0;
+  top: 22px;
   right: 10px;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-}
-
-.acco-section .sa-accordion .item .acco-header.active {
-  background-color: green;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  font-size: 20px;
+  color: #fff;
 }
 
 .acco-section .sa-accordion .item .acco-header.active::after {
+  top: 10px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -350,5 +378,41 @@ ul {
   -webkit-transition: all .3s;
   transition: all .3s;
   overflow: hidden;
+}
+
+.tab-section .tab {
+  max-width: 700px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tab-section .tab .tab-menu {
+  margin-right: 20px;
+}
+
+.tab-section .tab .tab-menu ul li {
+  margin: 5px 0;
+}
+
+.tab-section .tab .tab-menu ul li a {
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: block;
+}
+
+.tab-section .tab .tab-menu ul li a.active {
+  background-color: #24c19a;
+  color: #fff;
+}
+
+.tab-section .tab .tab-body .tab-pane {
+  display: none;
+}
+
+.tab-section .tab .tab-body .tab-pane.active {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
